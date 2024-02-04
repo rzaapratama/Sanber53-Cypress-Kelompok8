@@ -3,6 +3,7 @@ describe("Create an account", () => {
     cy.visit("/");
     cy.get(".panel > .header > :nth-child(3) > a").click();
     cy.get(".base").should("be.visible");
+    cy.get("p > a > img").should("be.visible");
     cy.get("#firstname").type("Reza");
     cy.get("#lastname").type("Pratama");
     cy.get("#email_address").type("putuagusmasreza.personal@gmail.com");

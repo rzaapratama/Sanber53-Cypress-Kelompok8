@@ -1,43 +1,25 @@
-describe("Visit website", () => {
-  it("Should visit website", () => {
+describe("Check UI website", () => {
+  it("Check UI", () => {
     cy.visit("/");
-  });
-});
-
-describe("Check Text", () => {
-  it("Should have text", () => {
     cy.get(".content > p").should("have.text", "This is a demo store to test your test automaiton scripts. No orders will be fulfilled. If you are facing any issue, email us at hello@softwaretestingboard.com.");
-  });
-});
-
-describe("Check panel", () => {
-  it("Should have panel", () => {
     cy.get(".panel.wrapper > .panel").should("be.visible");
     cy.get(".panel.wrapper > .panel > .header").should("be.visible");
-  });
-});
-
-describe("Check navbar", () => {
-  it("Should have navbar", () => {
     cy.get(".navigation > :nth-child(1)").should("be.visible");
-  });
-});
-
-describe("Check logo", () => {
-  it("Should have logo", () => {
     cy.get(".logo > img").should("be.visible");
-  });
-});
-
-describe("Check search bar", () => {
-  it("Should have search bar", () => {
     cy.get("#search").should("be.visible");
     cy.get(".showcart").should("be.visible");
-  });
-});
-
-describe("Check img", () => {
-  it("Should have img", () => {
     cy.get("p > a > img").should("be.visible");
+    cy.get(".home-main > img").should("be.visible");
+    cy.get(".home-pants > img").should("be.visible");
+    cy.get(".home-t-shirts > .image").should("be.visible");
+    cy.get(".home-t-shirts > .content").should("be.visible");
+    cy.get(".home-erin > img").should("be.visible");
+    cy.get(".home-performance > img").should("be.visible");
+    cy.get(".home-eco > img").should("be.visible");
+    cy.get(".content-heading > .title").should("have.text", "Hot Sellers");
+    cy.get(".content-heading > .info").should("have.text", "Here is what`s trending on Luma right now");
+    cy.get(".product-items").should("be.visible");
+    cy.get(".page-footer > .content").should("be.visible");
+    cy.get(".copyright").should("be.visible");
   });
 });
