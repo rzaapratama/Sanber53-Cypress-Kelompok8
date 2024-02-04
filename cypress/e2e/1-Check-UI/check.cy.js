@@ -20,6 +20,7 @@ describe("Check UI website", () => {
     cy.get(".content-heading > .info").should("have.text", "Here is what`s trending on Luma right now");
     cy.get(".product-items").should("be.visible");
     cy.get(".page-footer > .content").should("be.visible");
+    cy.get(".copyright > span").should("be.visible");
     cy.get(".copyright").should("be.visible");
   });
 });
