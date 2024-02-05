@@ -10,10 +10,15 @@ describe('template spec', () => {
     cy.get(":nth-child(2) > .greet > .logged-in").should("have.text", "Welcome, Amanda Vyrlia!");
     cy.get(':nth-child(2) > .customer-welcome > .customer-name > .action').click();
     cy.get(':nth-child(2) > .customer-welcome > .customer-menu > .header > :nth-child(1) > a').click();
-    cy.get(':nth-child(7) > a').click();
-    cy.get('.field-name-firstname').type("Amanda");
-    cy.get('#lastname').type("Vyrlia");
-    cy.get('#form-validate > .actions-toolbar > div.primary > .action > span').click();
-    cy.get('.message-success > div').should("have.text", "You saved the account information");
+    cy.get('.items > :nth-child(6) > a').click();
+    cy.get('#telephone').type("02112345");
+    cy.get('#street_1').type("Jalan Mangga");
+    cy.get('#city').type("Jakarta");
+    cy.get('#region_id').select("Alaska");
+    cy.get('#zip').type("10490")
+    cy.get('#country').select("Indonesia");
+    cy.get('#form-validate > .actions-toolbar > div.primary > .action').click();
+
+
   });
 })
