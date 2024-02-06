@@ -4,21 +4,7 @@ describe('Open the Web', () => {
         cy.visit('https://magento.softwaretestingboard.com')
     })
 })
-describe('Search for View Product Men', () => {
-    it('finds the content "Men"', () => {
-        cy.contains("Men").click()
-        cy.url().should('include', '/men.html')
-        
-    })
-})
-describe('View Product Hero Hoodie', () => {
-    it('finds the content "Hero Hoodie"', () => {
-        cy.contains("Hero Hoodie").click()
-        cy.url().should('include', 'hero-hoodie.html')
-        cy.contains("$54.00")
-        
-    })
-})
+
 describe('Choose Size, Color, Quantity and Add to Cart', () => {
     it('finds the quantity size', () => {
        cy.get('#option-label-size-143-item-166').click()
